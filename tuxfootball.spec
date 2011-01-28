@@ -6,11 +6,14 @@ License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://downloads.sourceforge.net/project/tuxfootball/0.3/%{name}-%{version}.tar.gz
 # Source0-md5:	fa2475227ef30685887cc6e41663d4d3
-BuildRequires:	SDL_image
-BuildRequires:	SDL_mixer
-BuildRequires:	gettext-devel
-BuildRequires:	pkg-config
 URL:		http://tuxfootball.sourceforge.net/
+BuildRequires:	SDL-devel
+BuildRequires:	SDL_image-devel
+BuildRequires:	SDL_mixer-devel
+BuildRequires:	gettext-devel
+BuildRequires:	intltool
+BuildRequires:	libstdc++-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,7 +27,8 @@ Sensible Soccer.
 %setup -q
 
 %build
-%configure --disable-silent-rules
+%configure \
+	--disable-silent-rules
 %{__make}
 
 %install
