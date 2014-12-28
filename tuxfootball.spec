@@ -10,7 +10,7 @@ URL:		http://tuxfootball.sourceforge.net/
 BuildRequires:	SDL-devel
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	intltool
 BuildRequires:	libstdc++-devel
 BuildRequires:	pkgconfig
